@@ -1,0 +1,10 @@
+<script>
+  window.__INITIAL_STATE__ = {
+    flash: JSON.parse('<%= flash %>'.replace(/&quot;/g,'"')),
+    user: JSON.parse('<%= user %>'.replace(/&quot;/g,'"')),
+  }
+  window.__CONFIG__ = {
+    descriptionsByEntityName: JSON.parse('<%= descriptionsByEntityName %>'.replace(/&quot;/g,'"')),
+    NAME_SPACE: '<%= NAME_SPACE %>'
+  }
+</script>

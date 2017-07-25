@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "lodash.kebabcase": "^4.1.1",
+    "mongodb": "^2.2.11",
+		"pluralize": "^3.0.0",  
+    "transactions-express-aws": "latest",
+    "transactions-express-data": "latest",
+    "transactions-express-logger": "latest",
+    "transactions-express-passport": "latest",
+    "transactions-express-rest": "latest",
+    "transactions-express-rest-mongodb": "latest",
+    "transactions-express-socketio": "latest"
+  }
+}

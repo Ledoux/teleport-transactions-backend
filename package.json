@@ -1,0 +1,16 @@
+{
+  "author": "Erwan Ledoux",
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "license": "MIT",
+  "description": "Teleport backend template to integrate the transactions backend framework",
+  "name": "teleport-transactions-backend",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snipsco/teleport-transactions-backend"
+  },
+  "version": "0.0.1"
+}

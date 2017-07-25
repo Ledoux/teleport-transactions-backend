@@ -1,0 +1,15 @@
+AWS_CONFIG_ACCESS_KEY_ID=xxxxxx
+AWS_CONFIG_SECRET_ACCESS_KEY=xxxxxx
+AWS_CONFIG_REGION=us-east-1
+MONGO_URL=mongodb://localhost:27017/teleport-app
+NODEMAILER_ACCOUNT_NAME=localhost
+NODEMAILER_ACTIVATION_ROUTE=http://localhost:5001/verify?code
+NODEMAILER_PROJECT_NAME='Teleport App'
+NODEMAILER_SENDER_MAIL=robert.totoscano@gmail.com
+NODEMAILER_SENDER_NAME=Teleport
+JWT_SECRET=xxxxxxxxxxxxxxxxxxxx
+SESSION_KEY=teleport-session
+SESSION_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+SITE_NAME=teleport-app
+TOUR_MAIL=robert.totoscano@gmail.com
+TOUR_PASSWORD=1ouvrez7Les9Guillemins2
