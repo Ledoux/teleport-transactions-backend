@@ -138,7 +138,7 @@ function getSetup() {
             // if it is actually a GET request method on the matching
             // logged user, then it is indeed ok, we create a passing condition
             // object
-            if (req.method === 'GET' && options.length === 1) {
+            if (req.user && req.method === 'GET' && options.length === 1) {
               const { collectionName,
                 query
               } = options[0]
