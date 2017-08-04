@@ -1,12 +1,12 @@
 export const descriptionsByEntityName = {
-  feed: {
+  notification: {
     items: [
       { key: 'id', type: 'String' },
       { key: 'text', type: 'String' },
       { key: 'userId', type: 'String' }
     ],
     scope: 'active',
-    title: 'feed',
+    title: 'notification',
     type: 'collection'
   },
   user: {
