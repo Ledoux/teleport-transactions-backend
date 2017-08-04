@@ -1,5 +1,31 @@
 [
   {
+    "activationHash": "r1x8xwhsRgS1ZIgvnjAg",
+    "active" : true,
+    "id": "user_BeaCueupl",
+    "local" : {
+      "firstName" : "Robert",
+      "imageUrl": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14089153_127098954407388_2848599489598535243_n.jpg?oh=31d0225864776341c00d02d74ace6bcf&oe=5A00BE59",
+      "isMock": true,
+      "lastName" : "Totoscano",
+      "email" : "robert.totoscano@gmail.com",
+      "password": "$2a$08$4beou0QBKzCxjZzH8E0/CeWDm2Gk.zKTJ//YHyLRmcWCggLyYle8e"
+    },
+    "admin" : true
+  },
+  {
+    "active" : true,
+    "id": "user_H4zRxtYzl",
+    "local" : {
+      "firstName" : "Odile",
+      "imageUrl": "https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/14067984_108728636248446_7026766858760029999_o.jpg?oh=11f82821162984a2a58d1e8f6d24dca0&oe=59FF7CF8",
+      "isMock": true,
+      "lastName" : "Boblot",
+      "email" : "odile.boblot@gmail.com"
+    },
+    "admin" : false
+  },
+  {
     "active" : true,
     "id": "user_Hy7YweYpl",
     "local" : {
@@ -19,30 +45,6 @@
       "isMock": true,
       "lastName" : "Gogrobe",
       "email" : "remy.gogrobe@gmail.com"
-    },
-    "admin" : false
-  },
-  {
-    "activationHash": "r1x8xwhsRgS1ZIgvnjAg",
-    "active" : true,
-    "id": "user_BeaCueupl",
-    "local" : {
-      "firstName" : "Robert",
-      "imageUrl": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14089153_127098954407388_2848599489598535243_n.jpg?oh=31d0225864776341c00d02d74ace6bcf&oe=5A00BE59",
-      "lastName" : "Totoscano",
-      "email" : "robert.totoscano@gmail.com",
-      "password": "$2a$08$4beou0QBKzCxjZzH8E0/CeWDm2Gk.zKTJ//YHyLRmcWCggLyYle8e"
-    },
-    "admin" : true
-  },
-  {
-    "active" : true,
-    "id": "user_H4zRxtYzl",
-    "local" : {
-      "firstName" : "Odile",
-      "imageUrl": "https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/14067984_108728636248446_7026766858760029999_o.jpg?oh=11f82821162984a2a58d1e8f6d24dca0&oe=59FF7CF8",
-      "lastName" : "Boblot",
-      "email" : "odile.boblot@gmail.com"
     },
     "admin" : false
   }
