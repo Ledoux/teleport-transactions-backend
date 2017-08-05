@@ -218,7 +218,7 @@ function getSetup() {
         })
         // it is important to put all the apis uses before this useRender
         useRender(app, {
-          extraContext: req => {
+          getExtraContext: req => {
             // flash
             const flash = req.flash && req.flash()
             // since passport outputs 'missing credentials' message on generic 'error' key,
