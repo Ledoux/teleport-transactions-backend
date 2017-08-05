@@ -206,7 +206,11 @@ function getSetup() {
           localAuthenticateAndRedirect,
           password: process.env.TOUR_PASSWORD,
           returnTo,
-          routePath: '/tour'
+          routePath: '/tour',
+          users: [{
+            email: process.env.TOUR_MAIL,
+            password: process.env.TOUR_PASSWORD
+          }]
         })
         useGrab(app, {
           email: process.env.TOUR_MAIL,
