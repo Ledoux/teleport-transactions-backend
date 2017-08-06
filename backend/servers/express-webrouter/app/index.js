@@ -23,9 +23,8 @@ const { formatUserForFrontend,
   useTour
 } = require('transactions-express-passport')
 
-const { IS_DEV,
-  IS_LOCALHOST,
-  IS_PROD,
+const { IS_LOCALHOST,
+  IS_PRODUCTION,
   IS_SANDBOX
 } = require('./lib/config')
 const { conditionsByScopeName,
@@ -69,10 +68,10 @@ function getSetup() {
     })
       .then(({ conditions, db }) =>  {
         useMorgan(app, {
-          isProd: IS_PROD
+          isProd: IS_PRODUCTION
         })
         useSign(app, { db,
-          isProd: IS_PROD,
+          isProd: IS_PRODUCTION,
           session: {
             expiry: 1000 * 60 * 60 * 24 * 7, // 7 days
             key: process.env.SESSION_KEY,
@@ -118,7 +117,7 @@ function getSetup() {
           isAdmin: (user) => {
             return user && /@climatefeedback\.org$/.test(user.email)
           },
-          isProd: IS_PROD,
+          isProd: IS_PRODUCTION,
           logger,
           mailer,
           requiredFields: [
