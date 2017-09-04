@@ -27,9 +27,8 @@ const { IS_LOCALHOST,
   IS_PRODUCTION,
   IS_SANDBOX
 } = require('./lib/config')
-const { conditionsByScopeName,
-  descriptionsByEntityName
-} = require('./lib/transactions')
+const { descriptionsByEntityName }  = require('./lib/descriptions')
+const { conditionsByScopeName } = require('./lib/conditions')
 
 const NAME_SPACE = '/transactions'
 
