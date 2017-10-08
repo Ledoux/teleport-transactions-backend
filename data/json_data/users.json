@@ -1,25 +1,21 @@
 [
   {
-    "activationHash": "r1x8xwhsRgS1ZIgvnjAg",
-    "active" : true,
-    "id": "user_BeaCueupl",
+    "active" : false,
+    "id": "user_H4zRxtYzl",
     "local" : {
-      "firstName" : "Robert",
-      "imageUrl": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14089153_127098954407388_2848599489598535243_n.jpg?oh=31d0225864776341c00d02d74ace6bcf&oe=5A00BE59",
-      "isMock": true,
-      "lastName" : "Totoscano",
-      "email" : "robert.totoscano@gmail.com",
-      "password": "$2a$08$4beou0QBKzCxjZzH8E0/CeWDm2Gk.zKTJ//YHyLRmcWCggLyYle8e"
+      "firstName" : "Remy",
+      "imageUrl": "/static/images/remy_grogrobe.jpg",
+      "lastName" : "Gogrobe",
+      "email" : "remy.gogrobe@gmail.com"
     },
-    "admin" : true
+    "admin" : false
   },
   {
     "active" : true,
-    "id": "user_H4zRxtYzl",
+    "id": "user_B3zaxtEzl",
     "local" : {
       "firstName" : "Odile",
-      "imageUrl": "https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/14067984_108728636248446_7026766858760029999_o.jpg?oh=11f82821162984a2a58d1e8f6d24dca0&oe=59FF7CF8",
-      "isMock": true,
+      "imageUrl": "/static/images/odile_boblot.jpg",
       "lastName" : "Boblot",
       "email" : "odile.boblot@gmail.com"
     },
@@ -27,24 +23,23 @@
   },
   {
     "active" : true,
-    "id": "user_Hy7YweYpl",
+    "id": "user_BeaCueupl",
     "local" : {
-      "firstName" : "Virginie",
-      "imageUrl": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14199205_114162952370757_6589036164173925565_n.jpg?oh=91e898efbf544ce2ec75044aad835e29&oe=59EE0867",
-      "lastName" : "Dederuelle",
-      "email" : "virginie.dederuelle@gmail.com"
+      "firstName" : "Robert",
+      "imageUrl": "/static/images/robert_totoscano.jpg",
+      "lastName" : "Totoscano",
+      "email" : "robert.totoscano@gmail.com"
     },
-    "admin" : false
+    "admin" : true
   },
   {
     "active" : true,
-    "id": "user_Ab7YweZpl",
+    "id": "user_Av7RzeZpl",
     "local" : {
-      "firstName" : "Remy",
-      "imageUrl": "https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/14066331_118381061947855_5593822421092312132_o.jpg?oh=3965b7e9102bf94183fe837a925af33b&oe=59F50346",
-      "isMock": true,
-      "lastName" : "Gogrobe",
-      "email" : "remy.gogrobe@gmail.com"
+      "firstName" : "Virginie",
+      "imageUrl": "/static/images/virginie_dederuelle.jpg",
+      "lastName" : "Dederuelle",
+      "email" : "virginie.dederuelle@gmail.com"
     },
     "admin" : false
   }

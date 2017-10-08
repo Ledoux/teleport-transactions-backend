@@ -1,10 +1,13 @@
 <script>
-  window.__INITIAL_STATE__ = {
+  window.__INITIAL_STATE__ = { authorization: JSON.parse('<%= authorization %>'.replace(/&quot;/g,'"')),
     flash: JSON.parse('<%= flash %>'.replace(/&quot;/g,'"')),
-    user: JSON.parse('<%= user %>'.replace(/&quot;/g,'"')),
+    tour: JSON.parse('<%= tour %>'.replace(/&quot;/g,'"')),
+    user: JSON.parse('<%= user %>'.replace(/&quot;/g,'"'))
   }
-  window.__CONFIG__ = {
-    descriptionsByEntityName: JSON.parse('<%= descriptionsByEntityName %>'.replace(/&quot;/g,'"')),
-    NAME_SPACE: '<%= NAME_SPACE %>'
+  window.__SETUP__ = { api: JSON.parse('<%= api %>'.replace(/&quot;/g,'"')),
+    context: JSON.parse('<%= context %>'.replace(/&quot;/g,'"')),
+    description: JSON.parse('<%= description %>'.replace(/&quot;/g,'"')),
+    siteName: '<%= SITE_NAME %>',
+    socket: JSON.parse('<%= socket %>'.replace(/&quot;/g,'"'))
   }
 </script>
