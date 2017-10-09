@@ -1,9 +1,8 @@
-const notification = { items: [
+const model = { items: [
     { key: 'id', type: 'String' },
     { key: 'text', type: 'String' },
     { key: 'userId', type: 'String' }
-  ],
-  title: 'notification',
-  type: 'collection'
+  ]
 }
-export default notification
+
+export default model
