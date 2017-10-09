@@ -11,5 +11,3 @@ JWT_SECRET=xxxxxxxxxxxxxxxxxxxx
 SESSION_KEY=teleport-session
 SESSION_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 SITE_NAME=teleport-app
-TOUR_MAIL=robert.totoscano@gmail.com
-TOUR_PASSWORD=1ouvrez7Les9Guillemins2
