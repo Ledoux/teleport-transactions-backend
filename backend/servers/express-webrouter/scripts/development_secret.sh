@@ -10,4 +10,7 @@ NODEMAILER_SENDER_NAME=Teleport
 JWT_SECRET=xxxxxxxxxxxxxxxxxxxx
 SESSION_KEY=teleport-session
 SESSION_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+SITE_EMAIL=info@teleport.org
+SITE_LABEL=teleport-app
 SITE_NAME=teleport-app
+TRACKING_ID=UA-111111111-1
