@@ -1,5 +1,9 @@
 const editor = { collectionName: 'editors',
   icon: 'editor',
-  subscriptions: []
+  subscriptions: [
+    {
+      collectionName: 'editors'
+    }
+  ]
 }
 export default editor

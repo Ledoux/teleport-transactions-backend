@@ -2,6 +2,7 @@ require('babel-polyfill')
 const express = require('express')
 const fs =  require('fs')
 const http = require('http')
+const { withConditions } = require('transactions-express-conditions')
 const { useUploader } = require('transactions-express-data')
 const { logger,
   useMorgan
@@ -10,7 +11,7 @@ const { useMongo,
   useRouter
 } = require('transactions-express-rest-mongodb')
 const { useTransactionsExpressSocketio } = require('transactions-express-socketio')
-const { hasJwtApiAccess,
+const { withJwtAccess,
   useGrab,
   useJwt,
   useMailer,
@@ -21,6 +22,7 @@ const { hasJwtApiAccess,
 } = require('transactions-express-passport')
 
 const api = require('./lib/api').default
+const authorization = require('./lib/authorization').default
 const { dataPath,
   emailPath,
   grabPath,
@@ -29,11 +31,11 @@ const { dataPath,
   tourPath,
   uploadPath
 } = api
-const authorization = require('./lib/authorization').default
-const { IS_LOCALHOST,
+const { IS_DEVELOPMENT,
+  IS_LOCALHOST,
+  IS_PRODUCTION,
   IS_SANDBOX,
-  IS_STAGING,
-  IS_PRODUCTION
+  IS_STAGING
 } = require('./lib/config')
 const description = require('./lib/description').default
 const socket = require('./lib/socket').default
@@ -121,8 +123,9 @@ function getStack () {
           transactionsRouter
         } = useRouter(app, { authorization,
           db,
+          description,
           logger,
-          middlewares: [ hasJwtApiAccess ],
+          middlewares: [ withConditions, hasJwtApiAccess ],
           routePath: dataPath
         })
         useUploader(app, { awsConfig: { accessKeyId: process.env.AWS_CONFIG_ACCESS_KEY_ID,
@@ -146,7 +149,7 @@ function getStack () {
           })
           // it is important to put all the apis uses before this useRender
           useRender(app, {
-            getExtraContext: req => {
+            getExtraConfig: req => {
               // flash
               const flash = req.flash && req.flash()
               // since passport outputs 'missing credentials' message on generic 'error' key,
@@ -158,10 +161,11 @@ function getStack () {
               }
               return { api: JSON.stringify(api || {}),
                 authorization: JSON.stringify(authorization || {}),
-                context: JSON.stringify({ IS_LOCALHOST,
+                context: JSON.stringify({ IS_DEVELOPMENT,
+                  IS_LOCALHOST,
+                  IS_PRODUCTION,
                   IS_SANDBOX,
-                  IS_STAGING,
-                  IS_PRODUCTION
+                  IS_STAGING
                 }),
                 description: JSON.stringify(description || {}),
                 flash: JSON.stringify(flash),
