@@ -172,7 +172,6 @@ function getStack () {
                 description: JSON.stringify(description || {}),
                 flash: JSON.stringify(flash),
                 socket: JSON.stringify(socket || {}),
-                tracking: JSON.stringify({ ID: GOOGLE_ANALYTICS_TRACKING_ID }),
                 tour: JSON.stringify(tour || {}),
                 user: JSON.stringify(req.user || {})
               }
