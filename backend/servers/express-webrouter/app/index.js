@@ -92,13 +92,15 @@ function getStack () {
           localAuthenticate,
           routePath: signPath
         })
-        const mailer = useMailer(app, { awsConfig: { accessKeyId: process.env.AWS_CONFIG_ACCESS_KEY_ID,
-            secretAccessKey: process.env.AWS_CONFIG_SECRET_ACCESS_KEY,
-            region: process.env.AWS_CONFIG_REGION
-          },
+        const awsConfig = { accessKeyId: process.env.AWS_CONFIG_ACCESS_KEY_ID,
+          secretAccessKey: process.env.AWS_CONFIG_SECRET_ACCESS_KEY,
+          region: process.env.AWS_CONFIG_REGION
+        }
+        const mailer = useMailer(app, { awsConfig,
           accountName: process.env.NODEMAILER_ACCOUNT_NAME,
           activationRoute: process.env.NODEMAILER_ACTIVATION_ROUTE,
           logger,
+          middlewares: [ withJwtAccess ],
           senderName: process.env.NODEMAILER_SENDER_NAME,
           projectName: process.env.NODEMAILER_PROJECT_NAME,
           routePath: emailPath,
@@ -125,7 +127,7 @@ function getStack () {
           db,
           description,
           logger,
-          middlewares: [ withConditions, hasJwtApiAccess ],
+          middlewares: [ withConditions, withJwtAccess ],
           routePath: dataPath
         })
         useUploader(app, { awsConfig: { accessKeyId: process.env.AWS_CONFIG_ACCESS_KEY_ID,
@@ -170,6 +172,7 @@ function getStack () {
                 description: JSON.stringify(description || {}),
                 flash: JSON.stringify(flash),
                 socket: JSON.stringify(socket || {}),
+                tracking: JSON.stringify({ ID: GOOGLE_ANALYTICS_TRACKING_ID }),
                 tour: JSON.stringify(tour || {}),
                 user: JSON.stringify(req.user || {})
               }
